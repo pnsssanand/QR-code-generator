@@ -12,6 +12,7 @@ import { ShareButtons } from '@/components/ShareButtons';
 import { downloadQRCode, downloadQRAsPDF } from '@/utils/downloadUtils';
 import { uploadToCloudinary } from '@/utils/cloudinaryUtils';
 import { saveQRToFirestore } from '@/utils/firebaseUtils';
+import Footer from '@/components/Footer';
 
 const Index = () => {
   const [text, setText] = useState('https://example.com');
@@ -241,17 +242,8 @@ const Index = () => {
           </Card>
         </div>
 
-        {/* Enhanced Footer - responsive */}
-        <footer className="text-center mt-12 sm:mt-20 py-8 sm:py-12 border-t border-gray-200/50">
-          <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 sm:p-8 max-w-md mx-auto shadow-lg">
-            <p className="text-gray-700 font-semibold text-base sm:text-lg">
-              Designed and Developed by Mr. Anand Pinisetty
-            </p>
-            <p className="text-gray-500 text-sm mt-2">
-              Crafted with ❤️ and modern web technologies
-            </p>
-          </div>
-        </footer>
+        {/* Footer Component */}
+        <Footer />
       </div>
     </div>
   );
